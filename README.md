@@ -46,7 +46,7 @@ You can also use the appimage versions of the respective programs. Just copy bot
 
 2. Associate your games with the Sony - Playstation 2 (PCSX2 Launcher) core
 
-3. Configure antimicrox to use your distro's 'close window' binding to your controller button preference. Or you can use my pre-configured controller mappings [here](https://ufile.io/9t4vnq6m) for the 360 and Xbox One controllers. Place in your user ~/ directory. In the provided examples I've mapped LS click + RS click to exit PCSX2. PCSX2 should be configured to start in fullscreen via settings --> interface --> start fullscreen.   
+3. Configure antimicrox to use your distro's 'close window' binding to your controller button preference. Or you can use my pre-configured controller mappings [here](https://ufile.io/9t4vnq6m) for the 360 and Xbox One controllers. Place in your user ~/ directory. In the provided examples I've mapped LS click + RS click to exit PCSX2.
   
 3. And once done you should be able to launch and switch games directly from the RetroArch menu
 
