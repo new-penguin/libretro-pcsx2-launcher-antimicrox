@@ -139,7 +139,7 @@ void retro_run(void)
 bool retro_load_game(const struct retro_game_info *info)
 {
    // Launch without the gui if available (pcsx2).
-   char command[512] = "antimicrox --tray & pcsx2-qt";
+   char command[512] = "antimicrox --tray & pcsx2-qt -fullscreen";
 
    // Check if there is content to load.
    if (info != NULL && info->path != NULL && info->path[0] != '\0') {
@@ -154,7 +154,7 @@ bool retro_load_game(const struct retro_game_info *info)
 
    // Flatpak
    printf("libretro-pcsx2-launcher: PCSX2 not found. Attempting Flatpak...\n");
-   strcpy(command, "flatpak run io.github.antimicrox.antimicrox --tray & flatpak run net.pcsx2.PCSX2");
+   strcpy(command, "flatpak run io.github.antimicrox.antimicrox --tray & flatpak run net.pcsx2.PCSX2 -fullscreen");
    if (info != NULL && info->path != NULL && info->path[0] != '\0') {
       // Execute with --batch.
       sprintf(command, "%s \"%s\"", command, info->path);
@@ -166,7 +166,7 @@ bool retro_load_game(const struct retro_game_info *info)
 
    // AppImage
    printf("libretro-pcsx2-launcher: PCSX2 not found. Attempting AppImage...\n");
-   strcpy(command, "~/.config/retroarch/system/antimicrox.AppImage --tray & ~/.config/retroarch/system/pcsx2.AppImage");
+   strcpy(command, "~/.config/retroarch/system/antimicrox.AppImage --tray & ~/.config/retroarch/system/pcsx2.AppImage -fullscreen");
    if (info != NULL && info->path != NULL && info->path[0] != '\0') {
       // Execute with --batch.
       sprintf(command, "%s \"%s\"", command, info->path);
